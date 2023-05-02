@@ -26,4 +26,13 @@ cp bin/macvlan /var/lib/rancher/k3s/data/current/bin/
 cp bin/static /var/lib/rancher/k3s/data/current/bin/
 cp bin/ipvlan /var/lib/rancher/k3s/data/current/bin/
 ```
-
+Edit macvlan.conf
+```
+root@ip-10-0-1-60:/var/lib/rancher/k3s/agent/etc/cni/net.d# cat 20-macvlan.conf 
+{
+    "cniVersion": "0.4.0",
+    "name": "macvlan-network",
+    "type": "macvlan",
+    "mode": "bridge",
+}
+```
