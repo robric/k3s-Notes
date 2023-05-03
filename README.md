@@ -33,7 +33,16 @@ Multus
 ```
 kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 ```
-
+SCTP tooling
+```
+sudo apt install lksctp-tools
+```
+SCTP is by default in Ubuntu 20.04.5 LTS (no sctp kernel module)
+```console
+ubuntu@ip-172-31-23-42:~$ checksctp
+SCTP supported
+ubuntu@ip-172-31-23-42:~$
+```
 # k3s-Notes
 
 Quick notes k3S installation
