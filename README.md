@@ -1,6 +1,6 @@
 # kube install
 
-Vanilla install with flannel v1.25
+Vanilla install with flannel v1.25.
 
 ```
 #!/bin/bash
