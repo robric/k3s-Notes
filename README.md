@@ -182,3 +182,8 @@ sudo apt-get update
 sudo apt-get install helm
 helm completion bash | sudo tee /etc/bash_completion.d/helm > /dev/null
 ```
+
+# AWS fixes 
+```
+aws ec2 modify-network-interface-attribute  --network-interface-id eni-0307b17e9fc696925 --no-source-dest-check
+```
