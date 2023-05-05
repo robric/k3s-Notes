@@ -184,6 +184,16 @@ helm completion bash | sudo tee /etc/bash_completion.d/helm > /dev/null
 ```
 
 # AWS fixes 
+
+Distable source-check (this is by default)
 ```
 aws ec2 modify-network-interface-attribute  --network-interface-id eni-0307b17e9fc696925 --no-source-dest-check
+```
+Or use terraform:
+```
+resource "aws_instance" "oai-instance_2" {
+  ami           = "${var.ami_id}"
+  instance_type = "${var.server_instance_type}"
+  key_name      = "${var.key_name}"
+  source_dest_check = false // This is the control for source_check 
 ```
