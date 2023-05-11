@@ -156,9 +156,8 @@ cd plugins && ./build_linux.sh
 sleep 15
 sudo cp -r bin/* /opt/cni/bin/
 ## Install multus
+kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick.yml
 cd ~/
-git clone https://github.com/k8snetworkplumbingwg/multus-cni.git
-cat multus-cni/deployments/multus-daemonset-thick.yml | kubectl apply -f -
 kubectl get pods --all-namespaces | grep multus
 for i in `seq 1 10`
 do
